@@ -1,0 +1,93 @@
+@use "sass:color";
+
+footer {
+  background-color: $color-lightgray;
+  h4 {
+    font-weight: 800;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+  }
+  .row:first-child {
+    padding: 2rem;
+  }
+  li {
+    padding: .8rem 0;
+  }
+}
+a {
+  color: $color-darkgray;
+
+  &:active, &:hover {
+    text-decoration: none;
+  }
+}
+.widget.contact ul {
+
+  li a {
+    transition: background-color 0.25s ease-in-out 0s;
+    display: inline-block;
+    width: 2.5em;
+    height: 2.5em;
+    text-align: center;
+    line-height: 2.5em;
+    border-radius: 0.35em;
+    opacity: 0.75;
+    background: rgb(34, 34, 34);
+    color: $color-white;
+    &:active {
+      background: rgb(102, 102, 102);
+    }
+    &:hover {
+      background: rgb(68, 68, 68);
+    }
+  }
+}
+.contact .style2 {
+  display: flex;
+  justify-content: flex-start;
+   li {
+     padding-right: 1rem;
+   }
+  + p {
+    line-height: 2rem;
+    padding-top: 1rem;
+  }
+}
+.copyright {
+ padding-left: 2rem;
+  @media (min-width: $breakpoint-md){
+    display: flex;
+    justify-content: center;
+    .menu {
+      display: flex;
+      justify-content: flex-start;
+      li {
+        margin-right: 2rem;
+
+        display: inline-block;
+        &:nth-child(2){
+          border-right: 1px solid $color-lightergray;
+          border-left: 1px solid $color-lightergray;
+          padding-left: 2rem;
+          padding-right: 2rem;
+        }
+      }
+    }
+  }
+}
+
+footer .row .col-xs-12 {
+
+    @media (max-width: $breakpoint-md) {
+      border-bottom: 1px solid $color-lightergray;
+      padding-bottom: 3rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+
+
+
+
+
+

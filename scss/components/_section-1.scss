@@ -1,0 +1,45 @@
+@use "sass:color";
+
+h2 {
+  font-weight: 800;
+  font-size: 1.3rem;
+}
+.inner {
+  background-color: $color-white;
+  border-radius: $border-radius;
+  padding-bottom: 2rem;
+  box-shadow: $box-shadow;
+
+  header p {
+    font-size: 1rem;
+    color: $color-darkgray;
+  }
+}
+
+section header {
+  box-shadow: none;
+
+  @media (max-width: $breakpoint-md) {
+    text-align: left;
+  }
+
+}
+.image img {
+  display: block;
+  width: 100%;
+
+}
+
+.feature {
+  @media (max-width: $breakpoint-md) {
+    padding: 25px 0 25px 0;
+  }
+  @media (min-width: $breakpoint-md) {
+    padding: 40px 0 40px 0;
+  }
+}
+p.sections {
+  display: block;
+  line-height: 2rem;
+  padding: 0 2rem;
+}

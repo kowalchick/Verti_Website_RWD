@@ -1,0 +1,7 @@
+@use "sass:math";
+$columns: 12;
+$column-base-width: math.div(100%, $columns);
+
+$border-radius: 6px;
+$box-shadow: 0px 3px 0px 0px rgb(0 0 0 / 5%);
+$transition: .2s;

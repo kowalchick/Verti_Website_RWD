@@ -1,0 +1,57 @@
+@use "sass:color";
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 1rem;
+  width: 100%;
+}
+html, body {
+  background-color: $color-lightgray;
+  color: $color-darkgray;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+}
+a {
+  color: $color-primary;
+
+  &:active, &:hover {
+  text-decoration: none;
+}
+}
+
+//buttony
+
+.btn {
+  background-color: $color-primary;
+  color: $color-white;
+  border-radius: $border-radius;
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 800;
+  padding: 1rem;
+  text-decoration: none;
+  transition: $transition;
+
+  i {                           //ikonki sie odpychaja od tekstu
+    margin-right: 1rem;
+  }
+
+  &.btn-gray {
+    background-color: $color-lightgray;
+    color: $color-darkgray;
+  }
+
+  &:hover, &:active {                                                         //pamietaj o przecinku po hover!!!!!!!
+    background-color: color.scale($color-primary, $lightness: -10%);
+
+    &.btn-gray {
+      background-color: color.scale($color-lightgray, $lightness: -10%);
+    }
+  }
+}
+

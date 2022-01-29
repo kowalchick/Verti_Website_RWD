@@ -1,0 +1,8 @@
+@use "sass:math";
+$columns: 12;
+$column-base-width: math.div(100%, $columns);
+
+$breakpoint-sm: 736px;
+$breakpoint-md: 980px;
+$breakpoint-lg: 1280px;
+$breakpoint-xl: 1680px;

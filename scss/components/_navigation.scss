@@ -1,0 +1,121 @@
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;              //nie rozciaga loga
+  padding: 3rem 0;
+
+  .menu-btn {
+    appearance: none;
+
+    &:checked {
+      + .menu-icon {
+        left: calc(50% + 1rem)
+      }
+
+      ~ ul {
+        transform: none;
+      }
+    }
+
+  }
+  .menu-icon {
+    position: fixed;
+    top: 1rem;
+    left :1rem;
+    background-color: $color-darkgray;
+    color: $color-white;
+    padding: .5rem 1rem;
+    border-radius: $border-radius;
+    opacity: .3;
+    cursor: pointer;
+    transition: $transition;
+
+    &:hover, &:active {
+      opacity: .5;
+    }
+
+  }
+  a {
+    text-decoration: none;
+  }
+  .logo {
+    background-color: $color-secondary;
+    color: $color-white;
+    font-size: 2rem;
+    padding: .5rem;
+    font-style: italic;
+    display: inline-block;
+    border-radius: 4px;
+
+  }
+  ul {                                              //hamburger dla wersji mobile first
+    background-color: $color-white;
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    top:0;
+    left: 0;
+    transform: translate(-100%, 0);
+    transition: $transition;
+
+    li {
+      font-weight: 800;
+      padding: 0 1rem;
+
+      a {
+        display: inline-block;         //zeby mozna bylo padding zastosowac
+        color: $color-darkgray;
+        padding: 1rem 0;
+        border-top: 1px solid $color-lightgray;
+        width: 100%;
+
+      }
+
+      &:first-child a {
+        border-top: none;
+      }
+
+    }
+  }
+  @media (min-width: $breakpoint-md) {
+    justify-content: space-between;
+
+      .menu-btn, .menu-icon {
+        display: none;
+      }
+
+    ul {
+      display: block;
+      transition: none;
+      position: static;
+      background-color: transparent;
+      width: auto;
+      transform: none;
+
+      li {
+        display: inline-block;
+        margin-left: .5rem;                                                    //elementy nav sa od siebie odepchniete
+        padding: 0;
+
+        a {
+          border-radius: 4px;
+          color: $color-darkgray;
+          font-size: 0.75rem;
+          font-weight: 800;
+          padding: 0.5rem 1rem;
+
+          &:hover, &:active {
+            background-color: $color-white;
+          }
+        }
+
+        &:first-child a {
+          background-color: $color-darkgray;
+          color: $color-white;
+        }
+      }
+    }
+  }
+}
+
+

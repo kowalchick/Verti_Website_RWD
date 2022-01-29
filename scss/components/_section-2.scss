@@ -1,0 +1,70 @@
+@use "sass:color";
+
+
+//so whats section
+
+.section2 .row {
+
+  @media (min-width: $breakpoint-md) {
+    flex-direction: row-reverse;
+  }
+}
+.section2 {
+  background-color: $color-white;
+  box-shadow: $box-shadow;
+
+  h2 {
+    padding-top: 3rem;
+    padding-bottom: 1.5rem;
+
+
+
+    @media (min-width: $breakpoint-md){
+      font-size: 2rem;
+    }
+    @media (max-width: $breakpoint-md){
+      font-size: 1.5rem;
+    }
+  }
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+ p {
+   line-height: 2rem;
+   display: block;
+   padding-bottom: 1.5rem;
+
+ }
+  .btn {
+    @media (min-width: $breakpoint-md){
+      max-width: 50%;
+    }
+  }
+  .last {
+    padding-right: 2rem;
+    padding-left: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+//interesting stuff section
+
+.sidebar {
+  @media (max-width: $breakpoint-md){
+    border-top: 1px solid $color-lightgray;
+  }
+  .widget {
+    padding: 2rem 1.5rem;
+  }
+  h3 {
+    padding-bottom: 2rem;
+  }
+  .widget {
+    padding-right: 2rem;
+    padding-left: 2rem;
+    .row {
+      padding-bottom: 2rem;
+    }
+  }
+}
