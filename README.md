@@ -1,7 +1,7 @@
 
 # Hi people!
 
-Link to demo of this site is [here](https://kowalchick.github.io/Verti_RWD)
+Link to demo of this site is [here](https://kowalchick.github.io/Verti_Website_RWD/)
 
 ## Short Description of my work
 
